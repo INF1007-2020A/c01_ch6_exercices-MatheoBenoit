@@ -97,6 +97,7 @@ def get_recipes():
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
+    #syntaxe get, mais essayer sans get et que sa plante pas
     pass
 
 
@@ -110,15 +111,15 @@ def main() -> None:
     my_list = [3, 3, 5, 6, 1, 1]
     print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
-    #grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
-    #name, result = best_grades(grades)
-    #print(f"{name} a la meilleure moyenne: {result}")
+    grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
+    name, result = best_grades(grades)
+    print(f"{name} a la meilleure moyenne: {result}")
     
-    #print("On enregistre les recettes...")
-    #recipes = get_recipes()
+    print("On enregistre les recettes...")
+    recipes = get_recipes()
 
-    #print("On affiche une recette au choix...")
-    #print_recipe(recipes)
+    print("On affiche une recette au choix...")
+    print_recipe(recipes)
 
 
 if __name__ == '__main__':
