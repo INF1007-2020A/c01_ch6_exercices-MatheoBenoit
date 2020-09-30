@@ -54,6 +54,9 @@ def contains_doubles(items: list) -> bool:
 
 def best_grades(student_grades: dict) -> tuple:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
+
+    #voir screenshot ipad
+
     return "", 0.0
 
 
@@ -62,8 +65,30 @@ def histogram(sentence: str) -> tuple:
     #       Afficher l'histogramme et les lettres les plus fréquentes
     #       Retourner l'histogramme et le tableau de lettres
 
-    return {}, []
+    dict = {}
 
+    for letter in sentence:
+        if letter == " ":
+            continue
+        elif letter in dict:
+            dict[letter] += 1
+        else:
+            dict.update({letter: 1})
+    print(dict)
+
+    lettre_5fois = []
+
+    for key in dict:
+        if dict[key] > 4:
+            lettre_5fois.append(key)
+
+
+     #aussi voir screenshot pour autre solution, et pour les for dans les dicrionnaires
+
+    return dict, lettre_5fois
+
+sentence = input('')
+print(histogram(sentence))
 
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingrédients et enregistrer dans une structure de données 
