@@ -87,33 +87,51 @@ def histogram(sentence: str) -> tuple:
 
     return dict, lettre_5fois
 
-sentence = input('')
-print(histogram(sentence))
+#sentence = input('')
+#print(histogram(sentence))
 
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingrédients et enregistrer dans une structure de données 
-    pass
+    dict ={}
+    condition = True
+
+    while (condition):
+        recette = input ("ecrivez une recette, si vous avez termine, ecrivez fini")
+        if recette !="fini":
+            ingredient = input("ecrivez les ingredient de cette recette")
+            dict.update({recette: ingredient})
+        else:
+            condition = False
+    nom = input("quelle recette?")
+    print(dict.get(nom, "recette nexiste pas"))
+    #deuxieme solution ci-dessous
+    #if (nom in dict) == False:
+       #print("recette nexiste pas")
+
+    #else:
+       #print(dict[nom])
+
 
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
     #syntaxe get, mais essayer sans get et que sa plante pas
-    pass
+   pass
 
 
 def main() -> None:
-    print(f"On essaie d'ordonner les valeurs...")
-    print(order())
+    #print(f"On essaie d'ordonner les valeurs...")
+    #print(order())
 
-    print(f"On vérifie les anagrammes...")
-    print(anagrams())
+    #print(f"On vérifie les anagrammes...")
+    #print(anagrams())
 
-    my_list = [3, 3, 5, 6, 1, 1]
-    print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
+    #my_list = [3, 3, 5, 6, 1, 1]
+    #print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
     grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
     name, result = best_grades(grades)
-    print(f"{name} a la meilleure moyenne: {result}")
+    #print(f"{name} a la meilleure moyenne: {result}")
     
     print("On enregistre les recettes...")
     recipes = get_recipes()
